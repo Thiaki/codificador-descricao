@@ -8,7 +8,7 @@ const Ingredients = () => {
     const [listIngredients, setListIngredients] = useState<ListProps[]>([{ text: "" }]);
 
     const finalCode = `<strong>${textIngredients}</strong> <br /> <br />` +
-        listIngredients.map((item) => `<li>${item.text}</li>`).join("");
+        listIngredients.map((item) => `${item.text ? `<li>${item.text}</li>` : ""}`).join("");
 
     const handleAddItem = (e: React.MouseEvent<HTMLButtonElement>) => {
         addItemList<ListProps>(e, setListIngredients, { text: "", textBold: "" })
