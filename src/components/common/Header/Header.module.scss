@@ -1,0 +1,26 @@
+.header {
+    background-color: $gray-01;
+    
+    .navbar {
+        @include container(transparent, 0);
+        margin: auto;
+        .list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 60px;
+            .listItem {
+                list-style: none;
+                .linkItem {
+                    @include textStyles($white-01, 18px);
+                    padding: 5px 10px;
+                    border-radius: 8px;
+                    text-decoration: none;
+                    &:hover {
+                        background-color: $gray-02;
+                    }
+                }
+            }
+        }
+    }
+}

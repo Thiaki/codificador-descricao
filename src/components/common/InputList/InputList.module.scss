@@ -1,0 +1,22 @@
+.inputList {
+    width: calc(50% - 20px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    .label, .labelBold {
+        @include textStyles($font-size: 16px, $font-weight: $font-medium);
+        margin-right: 10px;
+    }
+
+    .input, .inputBold {
+        width: 75%;
+        @include textStyles($font-size: 14px);
+        font-family: $primary-font;
+        border-radius: 8px;
+        padding: 5px;
+        height: 25px;
+    }
+}

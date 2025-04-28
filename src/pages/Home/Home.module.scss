@@ -1,0 +1,19 @@
+[data-fs-home] {
+    @include container();
+
+    h1 {
+        @include textStyles($dark-blue-01, 42px, $font-black);
+        margin-bottom: 20px;
+    }
+
+    a {
+        text-decoration: none;
+
+        h2 {
+            @include textStyles($black-01, 26px, $font-bold);
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

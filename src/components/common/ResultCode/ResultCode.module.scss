@@ -1,0 +1,30 @@
+[data-fs-result-code] {
+    @include container();
+
+    .titleContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        .title {
+            @include textStyles($black-01, 26px, $font-black);
+        }
+
+        .copyButton {
+            @include buttonStyles();
+            @include textStyles($white-01, $font-weight: $font-bold);
+        }
+    }
+
+    .result {
+        @include textStyles($black-01, 16px);
+        word-break: break-word;
+        background-color: $white-01;
+        border: 1px solid $gray-01;
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 8px;
+    }
+}

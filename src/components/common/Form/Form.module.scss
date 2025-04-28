@@ -1,0 +1,27 @@
+[data-fs-form] {
+    @include container();
+
+    .title {
+        margin-bottom: 10px;
+        @include textStyles($black-01, 26px, $font-black);
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .inputList {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px 40px;
+        }
+
+        .addListButton {
+            @include buttonStyles();
+            @include textStyles($white-01);
+            max-width: fit-content;
+        }
+    }
+}
