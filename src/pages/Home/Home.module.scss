@@ -1,15 +1,15 @@
-[data-fs-home] {
+.home {
     @include container();
 
-    h1 {
+    .title {
         @include textStyles($dark-blue-01, 42px, $font-black);
         margin-bottom: 20px;
     }
 
-    a {
+    .pageLink {
         text-decoration: none;
 
-        h2 {
+        .pageName {
             @include textStyles($black-01, 26px, $font-bold);
             &:hover {
                 text-decoration: underline;
