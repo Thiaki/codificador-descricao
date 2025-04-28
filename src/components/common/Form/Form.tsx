@@ -1,7 +1,6 @@
 import styles from './Form.module.scss';
 import InputText from '../InputText/InputText';
 import InputList from '../InputList/InputList';
-import { ListProps } from 'pages/Advantage/Advantage';
 
 type FormProps = {
     title?: string;
@@ -51,21 +50,21 @@ const Form = ({ title, itemsText = [], itemsList = [], addItemList }: FormProps)
                 }
                 {itemsList?.length > 0 ? (
                     <>
-                    <div className={styles.inputList}>
-                        {itemsList?.map((item, index) => (
-                            <InputList
-                            key={index}
-                            id={item.id}
-                            bold={item.bold}
-                            label={item.label}
-                            onChange={item.onChange}
-                            items={item.items}
-                            />
-                        ))}
-                    </div>
-                    <button className={styles.addListButton} onClick={addItemList}>Adicionar mais Listas</button>
+                        <div className={styles.inputList}>
+                            {itemsList?.map((item, index) => (
+                                <InputList
+                                    key={index}
+                                    id={item.id}
+                                    bold={item.bold}
+                                    label={item.label}
+                                    onChange={item.onChange}
+                                    items={item.items}
+                                />
+                            ))}
+                        </div>
+                        <button className={styles.addListButton} onClick={addItemList}>Adicionar mais Listas</button>
                     </>
-                ) : <></> }
+                ) : <></>}
             </form>
         </section>
     )
