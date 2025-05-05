@@ -1,6 +1,6 @@
 import styles from "./Home.module.scss"
 import { Link } from "react-router-dom";
-import { pages } from "../../components/common/Header/Header"
+import { pages } from "../pages"
 
 const Home = () => {
     return (

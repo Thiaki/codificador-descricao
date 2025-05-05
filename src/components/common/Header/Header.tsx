@@ -1,28 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from './Header.module.scss'
-
-export const pages = [
-    {
-        name: "Tabela Nutricional",
-        link: "/tabela-nutricional"
-    },
-    {
-        name: "Benefícios",
-        link: "/beneficios"
-    },
-    {
-        name: "Como Tomar",
-        link: "/como-tomar"
-    },
-    {
-        name: "Ingredientes",
-        link: "/ingredientes"
-    },
-    // {
-    //     name: "Sobre",
-    //     link: "/descricao"
-    // },
-];
+import { pages } from "../../../pages/pages";
 
 const Header = () => {
     return (
