@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react'
 import { createBrowserRouter } from 'react-router-dom'
 import App from '../App'
 const Home = lazy(() => import('../pages/Home/Home'))
+const NutritionalTable = lazy(() => import('../pages/NutritionalTable/NutritionalTable'))
 const HowToTake = lazy(() => import('../pages/HowToTake/HowToTake'))
 const Advantage = lazy(() => import('../pages/Advantage/Advantage'))
 const Ingredients = lazy(() => import('../pages/Ingredients/Ingredients'))
@@ -22,7 +23,11 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'tabela-nutricional',
-                element: <h1>Tabela Nutricional (Em desenvolvimento)</h1>
+                element: (
+                    <Suspense fallback={<div>Carregando...</div>}>
+                        <NutritionalTable />
+                    </Suspense>
+                )
             },
             {
                 path: 'beneficios',

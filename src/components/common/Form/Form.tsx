@@ -1,11 +1,13 @@
 import styles from './Form.module.scss';
 import InputText from '../InputText/InputText';
 import InputList from '../InputList/InputList';
+import { NutrientProps } from '../../../pages/NutritionalTable/NutritionalTableCodes/Nutrient';
 
 type FormProps = {
     title?: string;
     itemsText?: InputTextProps[];
     itemsList?: InputListProps[];
+    itemsNutrient?: NutrientProps[];
     addItemList?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
@@ -33,12 +35,12 @@ export interface ListProps {
     textBold?: string;
 };
 
-const Form = ({ title, itemsText = [], itemsList = [], addItemList }: FormProps) => {
+const Form = ({ title, itemsText, itemsList, itemsNutrient, addItemList }: FormProps) => {
     return (
         <section data-fs-form>
             <h2 className={styles.title}>{title}</h2>
             <form className={styles.form}>
-                {itemsText?.length > 0 ? (
+                {itemsText ? (
                     itemsText?.map((item) => (
                         <InputText
                             label={item.label}
@@ -48,7 +50,7 @@ const Form = ({ title, itemsText = [], itemsList = [], addItemList }: FormProps)
                         />
                     ))) : <></>
                 }
-                {itemsList?.length > 0 ? (
+                {itemsList ? (
                     <>
                         <div className={styles.inputList}>
                             {itemsList?.map((item, index) => (
@@ -63,6 +65,14 @@ const Form = ({ title, itemsText = [], itemsList = [], addItemList }: FormProps)
                             ))}
                         </div>
                         <button className={styles.addListButton} onClick={addItemList}>Adicionar mais Listas</button>
+                    </>
+                ) : <></>}
+                {itemsNutrient ? (
+                    <>
+                        <button className={styles.addListButton} onClick={e => e.preventDefault()}>Adicionar Nutriente Primário</button>
+                        <button className={styles.addListButton} onClick={e => e.preventDefault()}>Adicionar Nutriente Secundário</button>
+                        <button className={styles.addListButton} onClick={e => e.preventDefault()}>Adicionar Nutriente Terciários</button>
+
                     </>
                 ) : <></>}
             </form>
