@@ -18,8 +18,8 @@ const NutritionalTable = () => {
         {
             type: "primary",
             nutrient: { name: "Nutriente" },
-            quantity: { name: "0" },
-            dailyValue: { name: "*" },
+            quantity: { name: "0g" },
+            dailyValue: { name: "*%" },
         },
     ]);
 
