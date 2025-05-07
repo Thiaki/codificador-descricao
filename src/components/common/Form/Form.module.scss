@@ -18,6 +18,30 @@
             gap: 20px 40px;
         }
 
+        .inputTable {
+            .textType {
+                @include textStyles($black-01, 18px, $font-black);
+            }
+
+            .inputTableItem {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 20px;
+                padding-bottom: 20px;
+                margin-bottom: 10px;
+                border-bottom: 2px solid $black-01;
+            }
+        }
+        
+        .containerButton {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
         .addListButton {
             @include buttonStyles();
             @include textStyles($white-01);
