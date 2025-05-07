@@ -1,5 +1,6 @@
 import { useState } from "react";
 import './NutritionalTable.module.scss';
+import './styleTable/NutritionalTable.scss';
 
 import { InputTextProps } from "../../components/common/Form/Form";
 import Form from "../../components/common/Form/Form";
@@ -18,7 +19,7 @@ const NutritionalTable = () => {
             type: "primary",
             nutrient: { name: "Nutriente" },
             quantity: { name: "0" },
-            dailyValue: { name: "0" },
+            dailyValue: { name: "*" },
         },
     ]);
 
@@ -100,6 +101,7 @@ const NutritionalTable = () => {
                 addNutrient={addNutrient}
             />
             <ResultCode text={finalCode} />
+            <div className="container-table" dangerouslySetInnerHTML={{ __html: finalCode }} />
         </>
     );
 };

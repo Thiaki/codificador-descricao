@@ -1,0 +1,119 @@
+.container-table {
+    font-family: Arial;
+
+    .container-nutritional-table {
+        margin: 60px auto;
+        --primary-border-color: #000;
+        --primary-text-color: #000;
+        --secondary-text-color: #4A5259;
+    
+        max-width: 580px;
+        padding: 10px 10px 20px;
+        border: 1px solid var(--primary-border-color);
+    }
+    
+    .container-title {
+        padding-bottom: 15px;
+        border-bottom: 3px solid var(--primary-border-color);
+        color: var(--primary-text-color);
+    }
+    
+    .title-nutritional-information {
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+    .subtitle-nutritional-information {
+        font-size: 12px;
+        font-weight: 400;
+        margin-top: 5px;
+    }
+    
+    .container-portions {
+        display: flex;
+        justify-content: space-between;
+        color: var(--primary-text-color);
+        font-size: 12px;
+        font-weight: 400;
+        padding: 7px 0;
+    }
+    
+    .container-daily-values {
+        padding-top: 10px;
+        color: var(--secondary-text-color);
+        font-size: 11px;
+        font-weight: 500;
+    }
+    
+    /* Nutritional Table */
+    
+    .nutritional-table {
+        width: 100%;
+        text-align: left;
+        border-spacing: 0;
+        border-collapse: collapse;
+        border-top: 4px solid var(--primary-border-color);
+        border-bottom: 4px solid var(--primary-border-color);
+    }
+    
+    .nutritional-table-title {
+        color: var(--primary-text-color);
+        font-size: 12px;
+        font-weight: 600;
+    }
+    
+    .nutritional-table-row {
+        font-weight: 400;
+        border-top: 1px solid var(--primary-border-color);
+    }
+    
+    .nutritional-table-title th:last-child,
+    .nutritional-table-row td:last-child {
+        text-align: end;
+    }
+    
+    .nutritional-table-title th:nth-child(2),
+    .nutritional-table-row td:nth-child(2) {
+        text-align: center;
+    }
+    
+    .nutritional-table-row.row-primary td,
+    .nutritional-table-row.row-secondary,
+    .nutritional-table-row.row-third {
+        color: var(--primary-text-color);
+        font-size: 12px;
+        padding: 5px 0;
+    }
+    .nutritional-table-row.row-secondary,
+    .nutritional-table-row.row-third {
+        color: var(--secondary-text-color);
+    }
+    .nutritional-table-row.row-secondary .nutrient {
+        padding: 5px 10px;
+    }
+    .nutritional-table-row.row-third .nutrient {
+        padding: 5px 20px;
+    }
+    
+    .nutritional-table-title .nutrient,
+    .nutritional-table-row .nutrient {
+        width: 50%;
+        min-width: 145px;
+    }
+    
+    .nutritional-table-title .quantity,
+    .nutritional-table-row .quantity {
+        width: 25%;
+    }
+    
+    .nutritional-table-title .daily-value,
+    .nutritional-table-row .daily-value {
+        width: 25%;
+        min-width: 60px;
+    }
+    
+    .nutritional-table-title .quantity,
+    .nutritional-table-title .daily-value {
+        padding: 5px;
+    }
+}
