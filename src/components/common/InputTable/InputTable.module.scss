@@ -1,0 +1,23 @@
+.inputTable {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &:first-of-type {
+        width: 35%;
+    }
+
+    .label {
+        @include textStyles($font-size: 16px, $font-weight: $font-medium);
+    }
+
+    .input {
+        @include textStyles($font-size: 14px);
+        font-family: $primary-font;
+        border-radius: 8px;
+        padding: 5px;
+        height: 40px;
+        &:first-of-type {
+            width: 57%;
+        }
+    }
+}
