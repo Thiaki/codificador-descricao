@@ -19,7 +19,7 @@ const NutritionalTable = () => {
             type: "primary",
             nutrient: { name: "Nutriente" },
             quantity: { name: "0g" },
-            dailyValue: { name: "*%" },
+            dailyValue: { name: "**" },
         },
     ]);
 
@@ -100,8 +100,9 @@ const NutritionalTable = () => {
                 itemsNutrient={itemsNutrient}
                 addNutrient={addNutrient}
             />
-            <ResultCode text={finalCode} />
-            <div className="container-table" dangerouslySetInnerHTML={{ __html: finalCode }} />
+            <ResultCode text={finalCode} nutritionalTable>
+                <div style={{width: "50%"}} className="container-table" dangerouslySetInnerHTML={{ __html: finalCode }} />
+            </ResultCode>
         </>
     );
 };

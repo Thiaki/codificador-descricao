@@ -1,5 +1,6 @@
 [data-fs-result-code] {
     @include container();
+    display: flex;
 
     .titleContainer {
         display: flex;
