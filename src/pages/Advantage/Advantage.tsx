@@ -44,7 +44,6 @@ const Advantage = () => {
         title="Benefícios"
         itemsList={inputList}
         addItemList={handleAddItem}
-        isDelete
       />
       <ResultCode text={finalCode} />
     </>
